@@ -1,0 +1,27 @@
+<h1>chatting</h1>
+
+<table>
+	<thead>
+		<tr>
+			<th>内容</th>
+		</tr>
+		<tbody>
+			<% @opinions.each do|opinion| %>
+			<tr>
+				<td><br><%= opinion.user.name %></td>
+				</tr>
+				<tr>
+				<td><%= opinion.body %></td>
+				<td><%= attachment_image_tag opinion, :image, :fill, 40, 40, fallback: 'company.jpg',size: '40x40' %><td>
+ 
+
+				<% end %>
+			</tr>
+	</tbody>
+	
+
+
+
+
+
+<%= link_to "new",  new_opinion_path%>

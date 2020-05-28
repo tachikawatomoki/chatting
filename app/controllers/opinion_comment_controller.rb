@@ -1,0 +1,2 @@
+class OpinionCommentController < ApplicationController
+	
