@@ -10,15 +10,16 @@
   </head>
 
   <body>
-    <header class="navbar navbar-inverse">
+    <header class="">
     <div class="container">
     <nav class="nav navbar-nav navbar-left">
-      <span>Bookers</span>
+
     </nav>
     <nav>
       <% if user_signed_in? %>
+      ようこそ！<%= current_user.name %>さん
+
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to 'Home', root_path, class:"glyphicon glyphicon-home" %></li>
             <li><%= link_to '社員一覧',user_index_path,class:"glyphicon glyphicon-user" %></li>
             <li><%= link_to '投稿一覧',opinions_path,class:"glyphicon glyphicon-book" %></li>
             <li><%= link_to 'Logout',destroy_user_session_path, method: :delete,class:"glyphicon glyphicon-log-out" %></li>
@@ -32,7 +33,7 @@
     </nav>
     </div>
     </header>
-    <nav class="navbar navbar-default">
+    <nav class="">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarEexample1">

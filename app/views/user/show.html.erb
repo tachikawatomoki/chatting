@@ -1,2 +1,8 @@
 <h1>社員紹介</h1>
 <p>自己紹介</p>
+
+<h4><%= @user.name %></h4>
+<%= @user.title %><br><br><br>
+
+<!-- if文 -->
+<%= link_to "プロフィール登録", edit_user_path %>

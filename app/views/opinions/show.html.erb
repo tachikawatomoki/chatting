@@ -1,2 +1,34 @@
 <h1>Opinions#show</h1>
 <p>Find me in app/views/opinions/show.html.erb</p>
+
+
+<% @opinion.opinion_comments.each do |opinion_comment| %>
+        <li class="comment">
+            <div class="comment-body bb">
+                <div class="comment-avatar">
+                    <div class="avatar">
+                        <%= image_tag('company.jpg', style: "width: 60px; height: 60px;") %>
+                    </div>
+                </div>
+                <div class="comment-text">
+                    <div class="comment-author clearfix">
+                        <a href="#" class="link-author"><%= opinion_comment.user.name %></a>
+                        <span class="comment-meta">
+                        <span class="comment-date"><%= opinion_comment.created_at.strftime('%Y/%m/%d') %></span>
+                        </span>
+                    </div>
+                    <div class="comment-entry"><%= opinion_comment.comment %></div>
+                </div>
+            </div>
+        </li>
+    <% end %>
+
+
+<%= form_for [@opinion, @opinion_comments] do |f| %>
+    <div class="row">
+        <div class="col-sm-12">
+            <%= f.text_area :comment, rows:'5', class: "form-control",placeholder: "コメントをここに" %>
+        </div>
+    </div>
+    <%= f.submit "送信する", class: "btn btn-lg btn-base-1 mt-20 pull-right" %>
+<% end %>

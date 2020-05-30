@@ -1,5 +1,5 @@
-class Opinion < ApplicationRecord
+class Opinion< ApplicationRecord
 	belongs_to :user
-	has_many :opinion_comment, dependent: :destroy
+	has_many :opinion_comments, dependent: :destroy
 	 attachment :image
 end

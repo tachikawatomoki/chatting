@@ -6,6 +6,7 @@ class OpinionsController < ApplicationController
 
   def show
   	@opinion=Opinion.find(params[:id])
+  	@opinion_comments = OpinionComment.new
   end
 
   def new
