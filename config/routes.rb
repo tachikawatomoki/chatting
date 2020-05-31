@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :user
   # resources :opinion_comments, only: [:create, :destroy]
   resources :opinions do
-    resources :opinion_comments, only: [:create, :destroy]
+  resources :opinion_comments, only: [:create, :destroy]
+  resource :favorites, only: [:create, :destroy]
   end
 end

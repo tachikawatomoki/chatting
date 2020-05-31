@@ -8,12 +8,27 @@
 
   <div class="field">
     <%= f.label :name %><br/>
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+    <%= f.text_field :name, autofocus: true, autocomplete: "名前" %>
   </div>
   
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "メールアドレス" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :number %><br />
+    <%= f.text_field :number, autofocus: true, autocomplete: "電話番号" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :space %><br />
+    <%= f.text_field :space, autofocus: true, autocomplete: "営業所名" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status, autofocus: true, autocomplete: "役職" %>
   </div>
 
   <div class="field">

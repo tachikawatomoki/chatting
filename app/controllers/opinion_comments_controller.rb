@@ -6,6 +6,7 @@ class OpinionCommentsController < ApplicationController
     comment.save!
     redirect_to opinion_path(opinion.id)
 end
+
 private
 def opinion_comment_params
     params.require(:opinion_comment).permit(:comment)
