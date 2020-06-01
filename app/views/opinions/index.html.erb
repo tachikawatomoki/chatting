@@ -27,6 +27,9 @@
 				<td><%= attachment_image_tag opinion, :image, :fill, 40, 40, fallback: 'company.jpg',size: '40' %></td>
 			</tr>
 			<tr>
+				<td><%=link_to "削除", opinions_path, method: :delete %><br></td>
+			</tr>
+			<tr>
 				<td>
 					<%= link_to "コメント", opinion_path(opinion.id) %>
 						<%= opinion.opinion_comments.count %><br>

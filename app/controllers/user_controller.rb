@@ -10,7 +10,7 @@ class UserController < ApplicationController
 
   def show
   	@user=User.find(params[:id])
-  	@opinions = @user.post_images.page(params[:page]).reverse_order
+  	# @opinions = @user.opinions.page(params[:page]).reverse_order
   end
 
   def new
@@ -37,6 +37,6 @@ class UserController < ApplicationController
 
   private
   def user_params
-  	params.require(:user).permit(:title, :image)
+  	  params.require(:user).permit(:title, :image)
   end
 end

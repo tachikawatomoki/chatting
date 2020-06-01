@@ -30,6 +30,12 @@ class OpinionsController < ApplicationController
     redirect_to opinions_path
   end
 
+  def destroy
+  	opinion=Opinion.finf(params[:id])
+  	opinion.destroy
+  	redirect_to opinions_path
+  end
+
   private
   def opinion_params
       params.require(:opinion).permit(:title, :body, :image)
