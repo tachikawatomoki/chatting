@@ -20,7 +20,7 @@
       <h4>ようこそ！<%= current_user.name %>さん</h4>
 
         <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to '社員一覧',user_index_path,class:"glyphicon glyphicon-user" %></li>
+            <li><%= link_to '社員一覧',users_path,class:"glyphicon glyphicon-user",data:{"turbolinks" => false} %></li>
             <li><%= link_to '投稿一覧',opinions_path,class:"glyphicon glyphicon-book" %></li>
             <li><%= link_to 'マイページ', user_path(current_user.id),class:"glyphicon glyphicon-user" %></li>
             <li><%= link_to 'Logout',destroy_user_session_path, method: :delete,class:"glyphicon glyphicon-log-out" %></li>
