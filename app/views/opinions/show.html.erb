@@ -25,26 +25,26 @@
 
 
 <%= form_for [@opinion, @opinion_comments] do |f| %>
-    <div class="row">
-        <div class="col-sm-12">
+    	<div class="row">
+        	<div class="col-sm-12">
             <%= f.text_area :comment, rows:'5', class: "form-control",placeholder: "コメントをここに" %>
-        </div>
-    </div>
+        	</div>
+   		 </div>
     <%= f.submit "送信する", class: "btn btn-lg btn-base-1 mt-20 pull-right" %>
 <% end %>
 
-<% if @opinion.favorited_by?(current_user) %>
-<li>
-    <%= link_to opinion_favorites_path(@opinion), method: :delete do %>
-    <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i>
-    <%= @opinion.favorites.count %> いいね
-    <% end %>
-</li>
-<% else %>
-<li>
-    <%= link_to opinion_favorites_path(@opinion), method: :post do %>
-    <i class="fa fa-heart-o" aria-hidden="true"></i>
-    <%= @opinion.favorites.count %> いいね
-    <% end %>
-</li>
-<% end %>
+		<% if @opinion.favorited_by?(current_user) %>
+			<li>
+		    	<%= link_to opinion_favorites_path(@opinion), method: :delete do %>
+		    	<i class="fa fa-heart" aria-hidden="true" style="color: red;"></i>
+		    	<%= @opinion.favorites.count %> いいね
+		    	<% end %>
+			</li>
+		<% else %>
+			<li>
+		    	<%= link_to opinion_favorites_path(@opinion), method: :post do %>
+		    	<i class="fa fa-heart-o" aria-hidden="true"></i>
+		    	<%= @opinion.favorites.count %> いいね
+		   	    <% end %>
+			</li>
+		<% end %>

@@ -10,5 +10,4 @@ Rails.application.routes.draw do
   resources :opinion_comments, only: [:create, :destroy]
   resource :favorites, only: [:create, :destroy]
   end
-   
 end
