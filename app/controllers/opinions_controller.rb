@@ -31,7 +31,7 @@ class OpinionsController < ApplicationController
   end
 
   def destroy
-  	opinion=Opinion.finf(params[:id])
+  	opinion=Opinion.find(params[:id])
   	opinion.destroy
   	redirect_to opinions_path
   end

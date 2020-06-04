@@ -1,7 +1,8 @@
 <h1>コメント</h1>
 
 
-
+<div class="container">
+	<div class="row">
 <% @opinion.opinion_comments.each do |opinion_comment| %>
         <li class="comment">
             <div class="comment-body bb">
@@ -19,9 +20,13 @@
                     </div>
                     <div class="comment-entry"><%= opinion_comment.comment %></div>
                 </div>
+                <%= link_to "削除", opinion_opinion_comment_path(opinion_comment.opinion, opinion_comment), method: :delete, class: "btn btn-danger pull-right" %>
+  </div>
             </div>
         </li>
     <% end %>
+</div>
+</div>
 
 
 <%= form_for [@opinion, @opinion_comments] do |f| %>

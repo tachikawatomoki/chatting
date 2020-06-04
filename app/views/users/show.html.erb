@@ -7,6 +7,6 @@
 <%= @user.title %>
 
 <% if current_user.id == @user.id %><br><br><br>
-<%= link_to "プロフィール登録・編集", edit_user_path %>
+<h3><%= link_to "プロフィール登録・編集", edit_user_path ,class:"label label-info"%></h3>
 
 <% end %>
