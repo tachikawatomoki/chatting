@@ -4,7 +4,6 @@
 <div class="container">
 	<div class="row">
 <% @opinion.opinion_comments.each do |opinion_comment| %>
-        <li class="comment">
             <div class="comment-body bb">
                 <div class="comment-avatar">
                     <div class="avatar">
@@ -21,12 +20,10 @@
                     <div class="comment-entry"><%= opinion_comment.comment %></div>
                 </div>
                 <%= link_to "削除", opinion_opinion_comment_path(opinion_comment.opinion, opinion_comment), method: :delete, class: "btn btn-danger pull-right" %>
-  </div>
-            </div>
-        </li>
-    <% end %>
+  			</div>
+ 	</div>
 </div>
-</div>
+<% end %>
 
 
 <%= form_for [@opinion, @opinion_comments] do |f| %>
@@ -39,17 +36,14 @@
 <% end %>
 
 		<% if @opinion.favorited_by?(current_user) %>
-			<li>
 		    	<%= link_to opinion_favorites_path(@opinion), method: :delete do %>
 		    	<i class="fa fa-heart" aria-hidden="true" style="color: red;"></i>
 		    	<%= @opinion.favorites.count %> いいね
 		    	<% end %>
 			</li>
 		<% else %>
-			<li>
 		    	<%= link_to opinion_favorites_path(@opinion), method: :post do %>
 		    	<i class="fa fa-heart-o" aria-hidden="true"></i>
 		    	<%= @opinion.favorites.count %> いいね
 		   	    <% end %>
-			</li>
 		<% end %>
