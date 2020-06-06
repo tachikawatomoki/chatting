@@ -1,3 +1,4 @@
+<div class="container">
 <h1>社員紹介</h1>
 <p>自己紹介</p>
 <%= attachment_image_tag @user, :image, :fill, 40, 40, fallback: 'company.jpg',size: '40' %>
@@ -10,3 +11,4 @@
 <h3><%= link_to "プロフィール登録・編集", edit_user_path ,class:"label label-info"%></h3>
 
 <% end %>
+</div>

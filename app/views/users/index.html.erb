@@ -1,4 +1,4 @@
-
+<div class="container">
 <p>User search</p>
 <%= form_with url:users_path,method: :get,data: {remote: false} do %>
     <%= text_field_tag :search %>
@@ -24,11 +24,11 @@
 				<td><%= attachment_image_tag user, :image, :fill, 40, 40, fallback: 'image.jpg',size: '40' %></td>
 				<td><%= link_to user.name, user_path(user.id) %></td>
 				<td><%= user.email %></td>
-				<td><%= user.number %></td>
+				<td><%= user.telephone_number %></td>
 				<td><%= user.space %></td>
 				<td><%= user.status %></td>
 			</tr>
 		<% end %>
 	</tbody>
 </table>
-
+</div>

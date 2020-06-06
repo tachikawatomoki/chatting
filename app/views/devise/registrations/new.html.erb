@@ -1,5 +1,5 @@
 
-
+<div class="container">
 <body>
 <h2 style="padding-top: 100px;">Sign up</h2>
 
@@ -17,8 +17,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :number %><br />
-    <%= f.text_field :number, autofocus: true, autocomplete: "電話番号" %>
+    <%= f.label :telephone_number %><br />
+    <%= f.text_field :telephone_number, autofocus: true, autocomplete: "電話番号" %>
   </div>
 
   <div class="field">
@@ -50,3 +50,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>

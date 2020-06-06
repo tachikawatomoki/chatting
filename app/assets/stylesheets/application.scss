@@ -14,4 +14,25 @@
  *= require_self
  */
 @import "bootstrap-sprockets";  /*ここを追加*/
-    @import "bootstrap";   
+    @import "bootstrap";
+
+.video{
+position: relative;
+}
+
+.video-box{
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 10%;
+ height: 100%;
+}
+
+.small{
+width: 100%;
+}
+
+.word{
+word-break: break-all;
+}
+

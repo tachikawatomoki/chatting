@@ -1,11 +1,12 @@
-<h3><%= link_to "新規投稿",  new_opinion_path,class:"label label-info"%></h3>
+
 <div class="container">
 	<div class="row">
 		<div class="col-xs-8"> 
+			<h3><%= link_to "新規投稿",  new_opinion_path,class:"label label-info"%></h3>
 			<h1>chatting</h1><br>
 
 						<% @opinions.each do|opinion| %>
-							<div class="col-xs-12"> 
+							<div class="col-xs-12 border"> 
 
 								<div class="row">
 									<div class="col-xs-2"> 
@@ -16,11 +17,11 @@
 
 									</div>
 
-									<div class="col-xs-5"> 
+									<div class="col-xs-5 word"> 
 										<%= opinion.body %>
 									</div>
 									<div class="col-xs-5"> 
-											<%= attachment_image_tag opinion, :image, :fill, 300, 200, fallback: 'company.jpg',size: '300×200' %>
+											<%= attachment_image_tag opinion, :image, :fill, 300, 200, fallback: 'company.jpg',size: '300×200', class: 'small' %>
 									</div>
 								</div>
 								<br>
@@ -51,7 +52,6 @@
 									</div>
 								</div>
 							</div>
-							________________________________________________
 						<% end %>
 			</div>
 		<div class="col-xs-4"> 
