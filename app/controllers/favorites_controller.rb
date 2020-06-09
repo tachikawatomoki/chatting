@@ -1,5 +1,12 @@
 class FavoritesController < ApplicationController
-	def create
+	
+
+
+    def index
+         @favorite_opinions = current_user.favorite_opinions
+    end
+    
+    def create
             opinion = Opinion.find(params[:opinion_id])
             favorite = current_user.favorites.new(opinion_id: opinion.id)
             favorite.save

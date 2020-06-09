@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :opinions, dependent: :destroy
   has_many :opinion_comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
+  has_many :favorite_opinions,through: :favorites,source: :opinion
   attachment :image
   def self.search(search)
         if search

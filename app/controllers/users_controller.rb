@@ -8,6 +8,10 @@ class UsersController < ApplicationController
 		end
 	end
 
+ def my_index
+    # @opinions=current_user
+    @opinions=Opinion.where(user_id: current_user.id)
+ end
   
   def show
   	@user=User.find(params[:id])
