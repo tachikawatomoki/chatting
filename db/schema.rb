@@ -19,22 +19,6 @@ ActiveRecord::Schema.define(version: 2020_06_08_132425) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "moves", force: :cascade do |t|
-    t.string "title"
-    t.string "video"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "myopinions", force: :cascade do |t|
-    t.text "body"
-    t.string "image_id"
-    t.integer "user_id"
-    t.string "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "opinion_comments", force: :cascade do |t|
     t.text "comment"
     t.integer "user_id"

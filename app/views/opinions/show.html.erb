@@ -1,8 +1,8 @@
-<h1>コメント</h1>
-
 
 <div class="container">
-	<div class="row">
+    <div class="row">
+<h1>コメント</h1>
+
 <% @opinion.opinion_comments.each do |opinion_comment| %>
             <div class="comment-body bb">
                 <div class="comment-avatar">
@@ -21,8 +21,7 @@
                 </div>
                 <%= link_to "削除", opinion_opinion_comment_path(opinion_comment.opinion, opinion_comment), method: :delete, class: "btn btn-danger pull-right" %>
   			</div>
- 	</div>
-</div>
+ 	
 <% end %>
 
 
@@ -47,3 +46,6 @@
 		    	<%= @opinion.favorites.count %> いいね
 		   	    <% end %>
 		<% end %>
+
+    </div>
+</div>
