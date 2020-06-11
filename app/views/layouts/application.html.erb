@@ -21,7 +21,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">タイトル</a>
+      <a class="navbar-brand" href="#"></a>
     </div>
 
     <div class="collapse navbar-collapse" id="navbarEexample">
@@ -51,9 +51,9 @@
     </nav>
 
     <nav>
-     
+     <% if user_signed_in? %>
       <h4>ようこそ！<%= current_user.name %>さん</h4>
-
+     <% end %>
         <ul class="nav navbar-nav navbar-right">
            
           </ul>
